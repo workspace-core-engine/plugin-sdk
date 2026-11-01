@@ -1,0 +1,170 @@
+{
+  "name": "@workspace-core/plugin-sdk",
+  "version": "0.7.0",
+  "description": "The plugin SDK for the core platform. Install it with \"@workspace-core/plugin-sdk\": \"github:workspace-core-engine/plugin-sdk#v0.7.0\".",
+  "license": "MIT",
+  "homepage": "https://github.com/workspace-core-engine/plugin-sdk#readme",
+  "bugs": {
+    "url": "https://github.com/workspace-core-engine/plugin-sdk/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/workspace-core-engine/plugin-sdk.git"
+  },
+  "type": "module",
+  "files": [
+    "bundled-types",
+    "dist",
+    "README.md",
+    "LICENSE"
+  ],
+  "exports": {
+    ".": {
+      "types": "./bundled-types/core-plugin-sdk.d.ts",
+      "import": "./dist/index.js",
+      "default": "./dist/index.js"
+    },
+    "./provider-bridge": {
+      "types": "./bundled-types/core-plugin-sdk-provider-bridge.d.ts",
+      "import": "./dist/provider-bridge.js",
+      "default": "./dist/provider-bridge.js"
+    },
+    "./provider-bridge/testing": {
+      "types": "./bundled-types/core-plugin-sdk-provider-bridge-testing.d.ts",
+      "import": "./dist/provider-bridge-testing.js",
+      "default": "./dist/provider-bridge-testing.js"
+    },
+    "./provider-bridge/acp": {
+      "types": "./bundled-types/core-plugin-sdk-provider-bridge-acp.d.ts",
+      "import": "./dist/provider-bridge-acp.js",
+      "default": "./dist/provider-bridge-acp.js"
+    },
+    "./provider-bridge/acp-next": {
+      "types": "./bundled-types/core-plugin-sdk-provider-bridge-acp-next.d.ts",
+      "import": "./dist/provider-bridge-acp-next.js",
+      "default": "./dist/provider-bridge-acp-next.js"
+    },
+    "./environment-provider": {
+      "types": "./bundled-types/core-plugin-sdk-environment-provider.d.ts",
+      "import": "./dist/environment-provider.js",
+      "default": "./dist/environment-provider.js"
+    },
+    "./machine-provider": {
+      "types": "./bundled-types/core-plugin-sdk-machine-provider.d.ts",
+      "import": "./dist/machine-provider.js",
+      "default": "./dist/machine-provider.js"
+    },
+    "./app": {
+      "types": "./bundled-types/core-plugin-sdk-app.d.ts",
+      "import": "./dist/app.js",
+      "default": "./dist/app.js"
+    },
+    "./host": {
+      "types": "./bundled-types/core-plugin-sdk-host.d.ts",
+      "import": "./dist/host.js",
+      "default": "./dist/host.js"
+    },
+    "./internal/composer-customization-validation": {
+      "types": "./bundled-types/core-plugin-sdk-internal-composer-customization-validation.d.ts",
+      "import": "./dist/internal/composer-customization-validation.js",
+      "default": "./dist/internal/composer-customization-validation.js"
+    },
+    "./internal/composer-handle": {
+      "types": "./bundled-types/core-plugin-sdk-internal-composer-handle.d.ts",
+      "import": "./dist/internal/composer-handle.js",
+      "default": "./dist/internal/composer-handle.js"
+    },
+    "./internal/composer-view": {
+      "types": "./bundled-types/core-plugin-sdk-internal-composer-view.d.ts",
+      "import": "./dist/internal/composer-view.js",
+      "default": "./dist/internal/composer-view.js"
+    },
+    "./internal/file-navigation-validation": {
+      "types": "./bundled-types/core-plugin-sdk-internal-file-navigation-validation.d.ts",
+      "import": "./dist/internal/file-navigation-validation.js",
+      "default": "./dist/internal/file-navigation-validation.js"
+    },
+    "./internal/host-policy": {
+      "types": "./bundled-types/core-plugin-sdk-internal-host-policy.d.ts",
+      "import": "./dist/internal/host-policy.js",
+      "default": "./dist/internal/host-policy.js"
+    },
+    "./internal/plugin-app-collector": {
+      "types": "./bundled-types/core-plugin-sdk-internal-plugin-app-collector.d.ts",
+      "import": "./dist/internal/plugin-app-collector.js",
+      "default": "./dist/internal/plugin-app-collector.js"
+    },
+    "./testing": {
+      "types": "./bundled-types/core-plugin-sdk-testing.d.ts",
+      "import": "./dist/testing/index.js",
+      "default": "./dist/testing/index.js"
+    },
+    "./testing/app": {
+      "types": "./bundled-types/core-plugin-sdk-testing-app.d.ts",
+      "import": "./dist/testing/app.js",
+      "default": "./dist/testing/app.js"
+    },
+    "./testing/host": {
+      "types": "./bundled-types/core-plugin-sdk-testing-host.d.ts",
+      "import": "./dist/testing/host.js",
+      "default": "./dist/testing/host.js"
+    },
+    "./internal/rpc-tags": {
+      "types": "./bundled-types/core-plugin-sdk-internal-rpc-tags.d.ts",
+      "import": "./dist/internal/rpc-tags.js",
+      "default": "./dist/internal/rpc-tags.js"
+    },
+    "./internal/rpc-query-host": {
+      "types": "./bundled-types/core-plugin-sdk-internal-rpc-query-host.d.ts",
+      "import": "./dist/internal/rpc-query-host.js",
+      "default": "./dist/internal/rpc-query-host.js"
+    },
+    "./process": {
+      "types": "./bundled-types/core-plugin-sdk-process.d.ts",
+      "import": "./dist/process.js",
+      "default": "./dist/process.js"
+    }
+  },
+  "types": "./bundled-types/core-plugin-sdk.d.ts",
+  "dependencies": {
+    "@tanstack/react-query": "^5.62.0",
+    "cross-spawn": "^7.0.6",
+    "zod": "^4.6.5"
+  },
+  "peerDependencies": {
+    "@testing-library/react": "^16.3.2",
+    "@types/better-sqlite3": "^7.6.12",
+    "@types/react": "^19.0.0",
+    "better-sqlite3": ">=12",
+    "cron-parser": "^5.5.0",
+    "hono": "^4.11.9",
+    "react": "^19.0.0",
+    "react-dom": "^19.0.0"
+  },
+  "peerDependenciesMeta": {
+    "@testing-library/react": {
+      "optional": true
+    },
+    "@types/better-sqlite3": {
+      "optional": true
+    },
+    "@types/react": {
+      "optional": true
+    },
+    "better-sqlite3": {
+      "optional": true
+    },
+    "cron-parser": {
+      "optional": true
+    },
+    "hono": {
+      "optional": true
+    },
+    "react": {
+      "optional": true
+    },
+    "react-dom": {
+      "optional": true
+    }
+  }
+}
